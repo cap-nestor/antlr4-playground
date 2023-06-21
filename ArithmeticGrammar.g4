@@ -1,5 +1,5 @@
 grammar ArithmeticGrammar;
-// lexer
+// parser
 //prog: block EOF 
 prog: line (NL line)* EOF
     ;
@@ -12,7 +12,7 @@ expr: left=expr op=('*'|'/') right=expr        # InfixExpr
     | atom=HELLO                               # HelloExpr
     | atom=BYE                                 # ByeExpr
     ;
-// parser
+// lexer
 HELLO: ('hello'|'hi')  ;
 BYE  : ('bye'| 'tata') ;
 INT  : [0-9]+         ;

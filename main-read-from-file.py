@@ -53,7 +53,7 @@ def main(argv):
     stream = CommonTokenStream(lexer)
     # parser
     parser = ArithmeticGrammarParser(stream)
-    # Invoke the name of the biggest lexer block
+    # Invoke the name of the biggest parser block
     tree = parser.prog()
     # Evaluator
     visitor = MyVisitor()
